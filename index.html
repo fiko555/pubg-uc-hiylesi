@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free PUBG UC Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        button {
+            background: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Free PUBG UC Generator</h2>
+        <label for="username">Enter your PUBG Username:</label>
+        <input type="text" id="username" placeholder="Your PUBG Username">
+        <label for="ucAmount">Select UC Amount:</label>
+        <select id="ucAmount">
+            <option>600 UC</option>
+            <option>1800 UC</option>
+            <option>5000 UC</option>
+            <option>Unknown Amount</option>
+        </select>
+        <button onclick="generateUC()">Generate UC</button>
+        <p id="loading" class="hidden">Processing...</p>
+        <p id="success" class="hidden">Success! UC added to your account.</p>
+    </div>
+    <script>
+        function generateUC() {
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('success').classList.add('hidden');
+            
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('success').classList.remove('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
